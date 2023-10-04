@@ -128,6 +128,7 @@ class Kernel extends ConsoleKernel
         //     ->runInBackground();
         
         // Log::info('Rotina de backup agendada com sucesso.');
+        // Teste
         
     }
 
