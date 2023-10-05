@@ -20,17 +20,17 @@
                      {{ __('Novo usuário') }}
                     </x-nav-link>
 
-                    <!-- <x-nav-link href="{{ route('cadastroequipamento') }}" :active="request()->routeIs('cadastroequipamento')">
+                     {{-- <x-nav-link href="{{ route('cadastroequipamento') }}" :active="request()->routeIs('cadastroequipamento')">
                         {{ __('Novo equipamento') }}
-                    </x-nav-link> -->
+                    </x-nav-link>  --}}
 
                     <x-nav-link href="{{ route('painelnobreak') }}" :active="request()->routeIs('painelnobreak')">
                         {{ __('Painel de Configuração') }}
                     </x-nav-link>
 
-                    <!-- <x-nav-link href="{{ route('monitoramento') }}" :active="request()->routeIs('monitoramento')">
+                     {{-- <x-nav-link href="{{ route('monitoramento') }}" :active="request()->routeIs('monitoramento')">
                         {{ __('Monitoramento') }}
-                    </x-nav-link> -->
+                    </x-nav-link> --}}
                 </div>
             </div>
 
