@@ -24,7 +24,7 @@
                         {{ __('Novo equipamento') }}
                     </x-nav-link>
 
-                    @if (auth()->user()->id == 2)
+                    @if (auth()->user()->id == 1)
                         <x-nav-link href="{{ route('listaEquipamentos') }}" :active="request()->routeIs('listaEquipamentos')">
                             {{ __('Lista de Equipamentos') }}
                         </x-nav-link>    

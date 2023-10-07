@@ -15,7 +15,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
-                                <th>Descrição</th>
+                                <th>IP</th>
+                                <th>Versão do Protocolo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -23,7 +24,8 @@
                                 <tr>
                                     <td>{{ $equipamento->id }}</td>
                                     <td>{{ $equipamento->nome }}</td>
-                                    <td>{{ $equipamento->descricao }}</td>
+                                    <td>{{ $equipamento->ip }}</td>
+                                    <td>{{ $equipamento->versao_protocolo }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -32,7 +34,6 @@
             </div>
         </div>
     </div>
-
     <script>
         $(document).ready(function() {
             $('#tabela-equipamentos').DataTable();
