@@ -1,0 +1,40 @@
+/* Estilizando o formulário */
+form {
+    max-width: 400px; /* Tamanho máximo para o formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente na tela */
+    padding: 20px; /* Espaçamento interno do formulário */
+}
+
+/* Estilizando os rótulos (labels) */
+label {
+    display: block; /* Coloca cada rótulo em uma nova linha */
+    margin-bottom: 5px; /* Espaço entre rótulos */
+}
+
+/* Estilizando os campos de entrada (inputs) */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%; /* Preenche todo o espaço disponível no formulário */
+    padding: 10px; /* Espaçamento interno nos campos de entrada */
+    margin-bottom: 10px; /* Espaço entre os campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+/* Estilizando o botão de envio */
+input[type="submit"],
+button[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre o botão */
+}
+
+/* Estilizando o botão de envio quando hover (passar o mouse por cima) */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}

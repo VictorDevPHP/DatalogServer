@@ -20,9 +20,9 @@
                      {{ __('Novo usuário') }}
                     </x-nav-link>
 
-                     {{-- <x-nav-link href="{{ route('cadastroequipamento') }}" :active="request()->routeIs('cadastroequipamento')">
+                     <x-nav-link href="{{ route('cadastroequipamento') }}" :active="request()->routeIs('cadastroequipamento')">
                         {{ __('Novo equipamento') }}
-                    </x-nav-link>  --}}
+                    </x-nav-link> 
 
                     <x-nav-link href="{{ route('painelnobreak') }}" :active="request()->routeIs('painelnobreak')">
                         {{ __('Painel de Configuração') }}

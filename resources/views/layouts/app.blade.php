@@ -12,6 +12,7 @@
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css" rel="stylesheet">
+
         <title>EnergyTech</title>
 
         @livewireStyles

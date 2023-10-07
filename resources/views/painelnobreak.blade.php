@@ -3,20 +3,23 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-pYEdV7KjBbkpeuX9pJ3h3uHP7mXYFXUnC+oY0sEYBTKhO1sEnkKsT+T9CZ1f43eOKhjKQrGImV7YdQkyJjlc7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-pYEdV7KjBbkpeuX9pJ3h3uHP7mXYFXUnC+oY0sEYBTKhO1sEnkKsT+T9CZ1f43eOKhjKQrGImV7YdQkyJjlc7w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <x-app-layout>
     <x-slot name="header">
         <ul class="vertical-links">
-            <li><i class="fal fa-battery-empty"></i> <a href="#" id="open-painel">Anapolis-forum-terreo NB1</a></li>
+            <li><i class="fal fa-battery-empty"></i> <a href="#" id="open-painel">Anapolis-forum-terreo NB1</a>
+            </li>
             <li><a href="#" id="open-painel-2">Forum AP Garavelo NB1 </a></li>
             <li><a href="#" id="open-painel-3">Forum Bela vista NB1</a></li>
             <li><a href="#" id="open-painel-4">Forum Senador Canedo NB1</a></li>
             <li><a href="#" id="open-painel-5">Forum Crominia NB1</a></li>
             <li><a href="#" id="open-painel-6">Forum Goiânia FCIVEL Subsolo NB1</a></li>
             <li><a href="#" id="open-painel-7">Forum Goiânia FCIVEL Subsolo NB2</a></li>
-            <li><a href="#" id="open-painel-8">Forum Goiânia FCRIM  Subsolo NB1</a></li>
-            <li><a href="#" id="open-painel-9">Forum Goiânia FCRIM  Subsolo NB2</a></li>
+            <li><a href="#" id="open-painel-8">Forum Goiânia FCRIM Subsolo NB1</a></li>
+            <li><a href="#" id="open-painel-9">Forum Goiânia FCRIM Subsolo NB2</a></li>
             <li><a href="#" id="open-painel-10">Forum Goiânia juizado Novo Mundo NB1</a></li>
             <li><a href="#" id="open-painel-11">Forum Goiânia Rua 19 NB1</a></li>
             <li><a href="#" id="open-painel-12">Forum Goiânia Engenharia NB1</a></li>
@@ -29,7 +32,7 @@
             <li><a href="#" id="open-painel-19">TJGO Clenon B-Subsolo NB3</a></li>
             <li><a href="#" id="open-painel-20">Forum Trindade NB1</a></li>
             <li><a href="#" id="open-painel-21">Forum Trindade NB2</a></li>
-            
+
         </ul>
     </x-slot>
     <div class="page-content">
@@ -75,8 +78,8 @@
     <div id="Painel-modal-10" title="Painel de configuração">
         <iframe src="" style="width: 100%; height: 100%;"></iframe>
     </div>
-     {{-- Iframe modal 11 --}}
-     <div id="Painel-modal-11" title="Painel de configuração">
+    {{-- Iframe modal 11 --}}
+    <div id="Painel-modal-11" title="Painel de configuração">
         <iframe src="" style="width: 100%; height: 100%;"></iframe>
     </div>
     {{-- Iframe modal 12 --}}
@@ -146,7 +149,7 @@
             $("#open-painel-2").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-2").dialog("open");
-                $("#Painel-modal-2 iframe").attr("src", "{{env('modal2')}}").attr("target", "_parent");
+                $("#Painel-modal-2 iframe").attr("src", "{{ env('modal2') }}").attr("target", "_parent");
             });
             // Inicializa a modal box 3
             $("#Painel-modal-3").dialog({
@@ -168,14 +171,14 @@
                 width: 1440,
                 height: 900
             });
-             // Abre a modal box 4 quando o link é clicado
-             $("#open-painel-4").click(function(event) {
+            // Abre a modal box 4 quando o link é clicado
+            $("#open-painel-4").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-4").dialog("open");
                 $("#Painel-modal-4 iframe").attr("src", "http://10.116.7.1/").attr("target", "_parent");
             });
-             // Inicializa a modal box 5
-             $("#Painel-modal-5").dialog({
+            // Inicializa a modal box 5
+            $("#Painel-modal-5").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
@@ -187,15 +190,15 @@
                 $("#Painel-modal-5").dialog("open");
                 $("#Painel-modal-5 iframe").attr("src", "http://10.201.7.1/").attr("target", "_parent");
             });
-             // Inicializa a modal box 6
-             $("#Painel-modal-6").dialog({
+            // Inicializa a modal box 6
+            $("#Painel-modal-6").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
                 height: 900
             });
-             // Abre a modal box 6 quando o link é clicado
-             $("#open-painel-6").click(function(event) {
+            // Abre a modal box 6 quando o link é clicado
+            $("#open-painel-6").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-6").dialog("open");
                 $("#Painel-modal-6 iframe").attr("src", "http://10.38.7.1/").attr("target", "_parent");
@@ -207,8 +210,8 @@
                 width: 1440,
                 height: 900
             });
-             // Abre a modal box 7 quando o link é clicado
-             $("#open-painel-7").click(function(event) {
+            // Abre a modal box 7 quando o link é clicado
+            $("#open-painel-7").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-7").dialog("open");
                 $("#Painel-modal-7 iframe").attr("src", "http://10.38.7.2/").attr("target", "_parent");
@@ -220,14 +223,14 @@
                 width: 1440,
                 height: 900
             });
-             // Abre a modal box 8 quando o link é clicado
-             $("#open-painel-8").click(function(event) {
+            // Abre a modal box 8 quando o link é clicado
+            $("#open-painel-8").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-8").dialog("open");
                 $("#Painel-modal-8 iframe").attr("src", "http://10.73.7.1/").attr("target", "_parent");
             });
-              // Inicializa a modal box 9
-              $("#Painel-modal-9").dialog({
+            // Inicializa a modal box 9
+            $("#Painel-modal-9").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
@@ -239,8 +242,8 @@
                 $("#Painel-modal-9").dialog("open");
                 $("#Painel-modal-9 iframe").attr("src", "http://10.73.7.2/").attr("target", "_parent");
             });
-             // Inicializa a modal box 10
-             $("#Painel-modal-10").dialog({
+            // Inicializa a modal box 10
+            $("#Painel-modal-10").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
@@ -259,8 +262,8 @@
                 width: 1440,
                 height: 900
             })
-             // Abre a modal box 11 quando o link é clicado
-             $("#open-painel-11").click(function(event) {
+            // Abre a modal box 11 quando o link é clicado
+            $("#open-painel-11").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-11").dialog("open");
                 $("#Painel-modal-11 iframe").attr("src", "http://10.16.7.1/").attr("target", "_parent");
@@ -285,21 +288,21 @@
                 width: 1440,
                 height: 900
             })
-              // Abre a modal box 12 quando o link é clicado
-              $("#open-painel-13").click(function(event) {
+            // Abre a modal box 12 quando o link é clicado
+            $("#open-painel-13").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-13").dialog("open");
                 $("#Painel-modal-13 iframe").attr("src", "http://10.113.7.1/").attr("target", "_parent");
             });
-             // Inicializa a modal box 14
-             $("#Painel-modal-14").dialog({
+            // Inicializa a modal box 14
+            $("#Painel-modal-14").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
                 height: 900
             })
-             // Abre a modal box 14 quando o link é clicado
-             $("#open-painel-14").click(function(event) {
+            // Abre a modal box 14 quando o link é clicado
+            $("#open-painel-14").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-14").dialog("open");
                 $("#Painel-modal-14 iframe").attr("src", "http://10.19.7.2/").attr("target", "_parent");
@@ -311,8 +314,8 @@
                 width: 1440,
                 height: 900
             })
-             // Abre a modal box 15 quando o link é clicado
-             $("#open-painel-15").click(function(event) {
+            // Abre a modal box 15 quando o link é clicado
+            $("#open-painel-15").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-15").dialog("open");
                 $("#Painel-modal-15 iframe").attr("src", "http://10.0.7.1/").attr("target", "_parent");
@@ -369,15 +372,15 @@
                 $("#Painel-modal-19").dialog("open");
                 $("#Painel-modal-19 iframe").attr("src", "http://10.14.7.7/").attr("target", "_parent");
             });
-             // Inicializa a modal box 20
-             $("#Painel-modal-20").dialog({
+            // Inicializa a modal box 20
+            $("#Painel-modal-20").dialog({
                 autoOpen: false,
                 modal: true,
                 width: 1440,
                 height: 900
             })
-             // Abre a modal box 20 quando o link é clicado
-             $("#open-painel-20").click(function(event) {
+            // Abre a modal box 20 quando o link é clicado
+            $("#open-painel-20").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-20").dialog("open");
                 $("#Painel-modal-20 iframe").attr("src", "http://10.104.7.1/").attr("target", "_parent");
@@ -389,8 +392,8 @@
                 width: 1440,
                 height: 900
             })
-             // Abre a modal box 21 quando o link é clicado
-             $("#open-painel-21").click(function(event) {
+            // Abre a modal box 21 quando o link é clicado
+            $("#open-painel-21").click(function(event) {
                 event.preventDefault();
                 $("#Painel-modal-21").dialog("open");
                 $("#Painel-modal-21 iframe").attr("src", "http://10.104.7.2/").attr("target", "_parent");
@@ -399,46 +402,45 @@
     </script>
 
     <style>
-      .vertical-links li {
-  margin-bottom: 1rem;
-  position: relative;
-  transition: all 0.2s ease;
-}
+        .vertical-links li {
+            margin-bottom: 1rem;
+            position: relative;
+            transition: all 0.2s ease;
+        }
 
-.vertical-links li:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: all 0.2s ease;
-}
+        .vertical-links li:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: all 0.2s ease;
+        }
 
-.vertical-links li:hover:before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
+        .vertical-links li:hover:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
 
-.link-icon {
-  margin-right: 0.5rem;
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 1;
-  transition: all 0.2s ease;
-}
+        .link-icon {
+            margin-right: 0.5rem;
+            display: inline-block;
+            font-size: 1.2rem;
+            line-height: 1;
+            transition: all 0.2s ease;
+        }
 
-a:hover .link-icon {
-  transform: translateX(-0.2rem);
-}
-a:hover {
-  background-color:#c4dfff;
-  transition: background-color 0.3s ease;
-}
+        a:hover .link-icon {
+            transform: translateX(-0.2rem);
+        }
 
+        a:hover {
+            background-color: #c4dfff;
+            transition: background-color 0.3s ease;
+        }
     </style>
-  </x-app-layout>
-  
+</x-app-layout>
