@@ -5,13 +5,13 @@
                 <a href="#" id="open-datalog"></a>
             </ul>
         </x-slot>
-		<main>
-			<h1 class="form-title" style="text-align: center">Cadastrar Equipamento</h1>
-			<form method="POST" action="{{ route('cadastroequipamento') }}">
-				<!-- Seu formulário aqui -->
-			</form>
-		</main>
-		
+        <main>
+            <h1 class="form-title" style="text-align: center">Cadastrar Equipamento</h1>
+            <form method="POST" action="{{ route('cadastroequipamento') }}">
+                <!-- Seu formulário aqui -->
+            </form>
+        </main>
+
         <div class="page-content">
             <form method="POST" action="{{ route('cadastroequipamento') }}">
                 @csrf
@@ -37,8 +37,7 @@
                 <input type="password" id="senha_snmp" name="senha_snmp" required><br>
 
                 <input type="submit" value="Enviar">
-
-                <button type="submit">Enviar</button>
+                {{-- <button type="submit">Enviar</button> --}}
             </form>
         </div>
     </x-app-layout>
@@ -79,8 +78,7 @@
     }
 
     /* Estilizando o botão de envio */
-    input[type="submit"],
-    button[type="submit"] {
+    input[type="submit"] {
         background-color: #007bff;
         /* Cor de fundo do botão */
         color: #fff;
@@ -96,14 +94,20 @@
     }
 
     /* Estilizando o botão de envio quando hover (passar o mouse por cima) */
-    button[type="submit"]:hover {
+    input[type="submit"]:hover {
         background-color: #0056b3;
         /* Cor de fundo do botão ao passar o mouse */
     }
-	.form-title {
-    font-size: 24px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Peso da fonte (negrito) */
-    margin-bottom: 20px; /* Espaçamento inferior para separar do formulário */
-    color: #333; /* Cor do texto do título */
-	}
+
+    /* Estilizando o título do formulário */
+    .form-title {
+        font-size: 24px;
+        /* Tamanho da fonte do título */
+        font-weight: bold;
+        /* Peso da fonte (negrito) */
+        margin-bottom: 20px;
+        /* Espaçamento inferior para separar do formulário */
+        color: #333;
+        /* Cor do texto do título */
+    }
 </style>
