@@ -22,7 +22,13 @@
 
                      <x-nav-link href="{{ route('cadastroequipamento') }}" :active="request()->routeIs('cadastroequipamento')">
                         {{ __('Novo equipamento') }}
-                    </x-nav-link> 
+                    </x-nav-link>
+
+                    @if (auth()->user()->id == 2)
+                        <x-nav-link href="{{ route('listaEquipamentos') }}" :active="request()->routeIs('listaEquipamentos')">
+                            {{ __('Lista de Equipamentos') }}
+                        </x-nav-link>    
+                    @endif
 
                     <x-nav-link href="{{ route('painelnobreak') }}" :active="request()->routeIs('painelnobreak')">
                         {{ __('Painel de Configuração') }}

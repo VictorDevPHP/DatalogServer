@@ -40,6 +40,11 @@
                 {{-- <button type="submit">Enviar</button> --}}
             </form>
         </div>
+        @if (session('success'))
+            <div class="alert alert-success" style="text-align: center">
+                {{ session('success') }}
+            </div>
+        @endif
     </x-app-layout>
 </div>
 <style>

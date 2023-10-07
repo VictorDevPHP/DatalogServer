@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CadastroEquipamentosController;
 use App\Http\Controllers\DadosNobreakController;
+use App\Http\Controllers\ListaEquipamentos;
 use App\Models\Equipamentos;
 use App\Http\Controllers\RegisterController;
 
@@ -64,6 +65,7 @@ Route::middleware([
 ])->group(function () {
 Route::get('/cadastroequipamento', [CadastroEquipamentosController::class, 'index'])->name('cadastroequipamento');
 Route::post('/cadastroequipamento', [CadastroEquipamentosController::class, 'store'])->name('cadastroequipamento');
+Route::get('listaEquipamentos', [ListaEquipamentos::class, 'render'])->name('listaEquipamentos');
 });
 // ------------------Rota para exportação em csv
 Route::get('/nobreaks/export/id={id}', function ($id) {
