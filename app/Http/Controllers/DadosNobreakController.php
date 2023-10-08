@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DadosNobreak;
 use App\Models\Equipamentos;
+use Illuminate\Support\Facades\Log;
+
 
 class DadosNobreakController extends Controller
 {
@@ -15,6 +17,7 @@ class DadosNobreakController extends Controller
         $dadosNobreak = DadosNobreak::when($selectedEquipamento, function ($query, $selectedEquipamento) {
             return $query->where('id_equipamento', $selectedEquipamento);
         })->get();
+        Log::channel('atividades')->info('O usuario '. auth()->user()->name. ' acessou o DashBoard');
         return view('dashboard', compact('dadosNobreak', 'equipamentos', 'selectedEquipamento'));
     }
 

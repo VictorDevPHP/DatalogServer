@@ -7,6 +7,7 @@ use App\Http\Controllers\DadosNobreakController;
 use App\Http\Controllers\ListaEquipamentos;
 use App\Models\Equipamentos;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Atividades;
 
 
 /*
@@ -21,8 +22,8 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-   return view('auth.login');
-    
+    return view('auth.login');
+
 });
 //------------------Rota para gerar relatorios de logs----------------------------------------
 
@@ -63,9 +64,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-Route::get('/cadastroequipamento', [CadastroEquipamentosController::class, 'index'])->name('cadastroequipamento');
-Route::post('/cadastroequipamento', [CadastroEquipamentosController::class, 'store'])->name('cadastroequipamento');
-Route::get('listaEquipamentos', [ListaEquipamentos::class, 'render'])->name('listaEquipamentos');
+    Route::get('/cadastroequipamento', [CadastroEquipamentosController::class, 'index'])->name('cadastroequipamento');
+    Route::post('/cadastroequipamento', [CadastroEquipamentosController::class, 'store'])->name('cadastroequipamento');
+    Route::get('listaEquipamentos', [ListaEquipamentos::class, 'render'])->name('listaEquipamentos');
+    Route::get('/nav/logs', [Atividades::class, 'render'])->name('logAtividades');
+    Route::get('/nav/logs', [Atividades::class, 'show'])->name('logAtividades');
 });
 // ------------------Rota para exportação em csv
 Route::get('/nobreaks/export/id={id}', function ($id) {
@@ -94,26 +97,14 @@ Route::get('/nobreaks/export/id={id}', function ($id) {
     // Cria uma resposta HTTP com o arquivo CSV como anexo
     return response()->streamDownload(function () use ($tempFile) {
         fpassthru($tempFile);
-    }, $fileName, [ 'Content-Type' => 'text/csv',
-    'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',        'Pragma' => 'public',        'Expires' => '0',    ]);
+    }, $fileName, [
+        'Content-Type' => 'text/csv',
+        'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+        'Pragma' => 'public',
+        'Expires' => '0',
+    ]);
 })->name('nobreaks.export.id');
 
 Route::get('/logs/{id}', [DadosNobreakController::class, 'getLogs'])->name('nobreaks.logs');
-
-
-//------------------------Rota de monitoramento-----------------------------
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/monitoramento', function () {
-        return view('monitoramento');
-    })->name('monitoramento');
-});
-
-
-
-
 
 

@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
+
 
 class RegisterController extends Controller
 {
     public function create()
     {
+        Log::channel('atividades')->info('O usuario '. auth()->user()->name. ' acessou a tela de cadastro');
         return view('register');
     }
 
@@ -27,8 +30,7 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        // Redirecionar para a página de login ou para onde desejar após o registro
+        Log::channel('atividades')->info('O usuario '. auth()->user()->name. ' cadastrou um novo usuario');
         return redirect()->route('login');
     }
 }

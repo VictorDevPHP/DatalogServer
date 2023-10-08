@@ -34,9 +34,11 @@
                         {{ __('Painel de Configuração') }}
                     </x-nav-link>
 
-                     {{-- <x-nav-link href="{{ route('monitoramento') }}" :active="request()->routeIs('monitoramento')">
-                        {{ __('Monitoramento') }}
-                    </x-nav-link> --}}
+                    @if (auth()->user()->id == 1)
+                        <x-nav-link href="{{ route('logAtividades') }}" :active="request()->routeIs('logAtividades')">
+                            {{ __('Atividade Dos Usuarios') }}
+                        </x-nav-link>
+                    @endif    
                 </div>
             </div>
 
